@@ -26,7 +26,7 @@ for (let index = 0; index < 10; index++) {
   galeria.appendChild(divImg);
 }
 
-const botao = document.querySelector('button');
+const botao = document.querySelector('.wpp');
 
 botao.addEventListener('click', () => {
   window.location.href =
