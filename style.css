@@ -24,6 +24,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--cor-fundo);
+  white-space: nowrap;
 }
 
 header {
@@ -262,8 +263,6 @@ button:hover {
     flex-direction: column;
   }
   .inferior{
-    text-align: center;
     flex-direction: column;
-     white-space: nowrap;
   }
 }
