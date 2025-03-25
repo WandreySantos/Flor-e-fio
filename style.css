@@ -143,7 +143,21 @@ button:hover {
   padding: 20px;
 }
 
+.carrinho{
+  background-color: #ccc;
+
+  padding: 5%;
+  position: absolute;
+  left: 160px;
+  top: 240px;
+}
+.carrinho:hover{
+  background-color: #ffffff;
+  color: #218838;
+}
+
 .img {
+  position: relative;
   width: 225px;
   height: 300px;
   margin: 10px;
@@ -185,7 +199,6 @@ button:hover {
   color: var(--cor-texto);
   text-align: center;
 }
-
 /* ===================== FORMULÁRIO ===================== */
 .form-container {
   width: 100%;
