@@ -62,7 +62,7 @@ header nav{
 nav ul{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 header li{
   list-style: none;
@@ -156,7 +156,6 @@ button {
   font-size: 15px;
   transition: 0.3s;
 }
-
 button:hover {
   background-color: var(--cor-secundaria);
   color: var(--cor-branca);
@@ -169,8 +168,7 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 20px;
+
 }
 
 .addcarrinho{
@@ -199,7 +197,6 @@ button:hover {
   border-left: 10px solid var(--cor-branca);
   transition: 1s;
 }
-
 
 .img:hover {
   border-color: var(--cor-hover);
@@ -260,6 +257,11 @@ button:hover {
     padding: 10px;
     margin: 10px;
   }
+  header ul {
+    display: flex ;
+    width: 100%;
+    justify-content: center;
+  }
   .carrinho{
     padding: 4px 30px;
     margin: 10px;
@@ -267,11 +269,12 @@ button:hover {
   .galeria{
     display: flex;
   }
-  .img{
-    width: 125px;
-    height: 180px;
-    font-size: 5px;
-  }
+  .img {
+    position: relative;
+    width: 150px;
+    height: 225px;
+    transition: 1s;
+}
   .img h2 {
   color: var(--cor-texto);
   font-size: 15px;
@@ -285,8 +288,8 @@ button:hover {
   .addcarrinho{
     width: auto;
     height: auto;
-    top: 130px;
-    left: 80px;
+    top: 170px;
+    left: 100px;
   }
 }
 

@@ -26,7 +26,7 @@ function gerar_cards(array) {
     const valor = document.createElement('p');
     nomeBuque.innerText = produto.nome;
     valor.innerText =
-      'R$: ' + parseFloat(produto.preco).toFixed(2).replace('.', ',');
+      'R$:' + parseFloat(produto.preco).toFixed(2).replace('.', ',');
 
     const addcarrinho = document.createElement('button');
     const iconCarrinho = document.createElement('i');
