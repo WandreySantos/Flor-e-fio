@@ -78,5 +78,5 @@ document.addEventListener('click', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  gerar_cards(produtos); // Chama com o tipo 'foto' ao carregar a página
+  gerar_cards(produtos);
 });
