@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iansui&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iansui&family=Rosarivo:ital@0;1&display=swap');
 
 /* ===================== VARIÁVEIS ===================== */
 :root {
@@ -29,11 +31,12 @@ body {
 
 header {
   background-color: var(--cor-branca);
+  position: relative;
   max-width: 100vw;
   height: 30vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 header img {
@@ -52,10 +55,12 @@ header h1 {
 }
 header nav{
   height: 100%;
-  margin-right: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 nav ul{
-  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,6 +82,30 @@ header button:hover{
   transform: scale(0.95);
   transition: transform 0.3s ease-in-out;
 }
+.carrinho{
+  background-color: #00ff22;
+  border: 4px solid ;
+  border-color: #00ff22;
+  color: #ffffff;
+  font-family: 'Rosarivo', monospace;
+  font-size: 100%;
+  position: relative;
+}
+.carrinho.ativo p{
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;
+  width: auto;
+  background-color: #684977;
+  right: 10%;
+  border-radius: 10px;
+  padding: 3%;
+}
+.carrinho:hover{
+  background-color: #ffffff;
+  color: #000000;
+}
+
 
 footer {
   background: var(--cor-primaria);
@@ -88,7 +117,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5% 10%;
+  padding: 1% 1%;
   gap: 40px;
   font-size: 20px;
 }
@@ -103,6 +132,7 @@ footer {
 
 .linha {
   width: 100%;
+  margin: 0;
 }
 
 .inferior {
@@ -143,7 +173,7 @@ button:hover {
   padding: 20px;
 }
 
-.carrinho{
+.addcarrinho{
   background-color: #ccc;
 
   padding: 5%;
@@ -151,7 +181,7 @@ button:hover {
   left: 160px;
   top: 240px;
 }
-.carrinho:hover{
+.addcarrinho:hover{
   background-color: #ffffff;
   color: #218838;
 }
@@ -187,7 +217,7 @@ button:hover {
 }
 
 .img h2 {
-  font-family: 'Arapey', serif;
+  font-family: 'Iansui', serif;
   color: var(--cor-texto);
   margin: 5px 0;
   font-size: 18px;
@@ -195,39 +225,14 @@ button:hover {
 }
 
 .img p {
-  font-size: 14px;
+  font-size: 16px;
+  font-family: 'Iansui', serif;
   color: var(--cor-texto);
   text-align: center;
 }
-/* ===================== FORMULÁRIO ===================== */
-.form-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.form-container input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.form-container button {
-  background-color: var(--cor-primaria);
-  color: var(--cor-branca);
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-.form-container button:hover {
-  background-color: var(--cor-secundaria);
-}
-
+  
 /* ===================== RESPONSIVIDADE- ===================== */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 651px) {
   header{
     width: 100vw;
     height: auto;
@@ -255,6 +260,35 @@ button:hover {
     padding: 10px;
     margin: 10px;
   }
+  .carrinho{
+    padding: 4px 30px;
+    margin: 10px;
+}
+  .galeria{
+    display: flex;
+  }
+  .img{
+    width: 125px;
+    height: 180px;
+    font-size: 5px;
+  }
+  .img h2 {
+  color: var(--cor-texto);
+  font-size: 15px;
+  text-align: start;
+  }
+  .img p {
+  font-size: 16px;
+  color: var(--cor-texto);
+  text-align: start;
+  }
+  .addcarrinho{
+    width: auto;
+    height: auto;
+    top: 130px;
+    left: 80px;
+  }
+}
 
   footer{
     background: var(--cor-primaria);
@@ -278,4 +312,3 @@ button:hover {
   .inferior{
     flex-direction: column;
   }
-}
