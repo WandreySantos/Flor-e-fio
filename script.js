@@ -7,15 +7,14 @@ const botaoFlores = document.getElementById('flores');
 const botaoTerceiro = document.getElementById('terceiro');
 const carrinho = document.querySelector('.carrinho');
 
-// Função para gerar os cards
 function gerar_cards(array) {
-  galeria.innerHTML = ''; // Limpa a galeria antes de preencher novamente
+  galeria.innerHTML = '';
 
   for (let index = 0; index < array.length; index++) {
     const produto = array[index];
 
     const divImg = document.createElement('div');
-    divImg.classList.add('img');
+    divImg.classList.add('card');
     divImg.setAttribute('id', `card${index}`);
 
     const imgElement = document.createElement('img');
@@ -58,11 +57,11 @@ botaoFlores.addEventListener('click', () => {
   const produtosExpecificos = produtos.filter((produto) =>
     produto.imagem.includes('flor')
   );
-  gerar_cards(produtosExpecificos); 
+  gerar_cards(produtosExpecificos);
 });
 
 botaoTerceiro.addEventListener('click', () => {
-  galeria.innerHTML = ''; 
+  galeria.innerHTML = '';
 });
 
 document.addEventListener('click', (event) => {
@@ -79,4 +78,28 @@ document.addEventListener('click', (event) => {
 
 document.addEventListener('DOMContentLoaded', function () {
   gerar_cards(produtos);
+});
+
+document.addEventListener('click', (event) => {
+  const card = event.target.closest('.card');
+  if (card) {
+    const informações = document.createElement('div');
+    informações.setAttribute('class', 'informações');
+    const fechar = document.createElement('p');
+    const nome = document.createElement('h1');
+    const preço = document.createElement('p');
+
+    fechar.classList.add('class', 'fechar');
+    fechar.innerText = 'X';
+    nome.innerText = card.querySelector('h2').innerText;
+    preço.innerText = card.querySelector('p').cloneNode(true);
+
+    informações.appendChild(card.querySelector('img').cloneNode(true));
+    informações.appendChild(fechar);
+    informações.appendChild(nome);
+    informações.appendChild(preço);
+
+    galeria.appendChild(informações);
+    card.classList.add('ativo');
+  }
 });
